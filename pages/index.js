@@ -28,7 +28,7 @@ export default function Home() {
             Our Collections
             <div className=" border-red-400 border-2 w-24 mt-5 mx-auto"></div>
           </h1>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 m-16">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 m-6 md:m-16">
             {data.products.map((product) => (
               <ProductItem product={product} key={product.slug}></ProductItem>
             ))}

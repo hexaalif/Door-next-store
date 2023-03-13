@@ -22,9 +22,14 @@ export default function ProductItem({ product }) {
             <p className="mt-5 text-xl font-bold text-gray-600">
               {product.description}
             </p>
-            <p className="mt-5 text-2xl font-bold text-red-400">
-              ${product.price}
-            </p>
+            <div className="flex justify-between items-center mt-5">
+              <p className=" text-2xl font-bold text-red-400">
+                ${product.price}
+              </p>
+              <button className="bg-red-400 p-4 text-white rounded-lg">
+                Add to Cart
+              </button>
+            </div>
           </div>
         </div>
       </div>
