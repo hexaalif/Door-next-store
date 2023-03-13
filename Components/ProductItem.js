@@ -7,7 +7,7 @@ export default function ProductItem({ product }) {
   console.log(product);
   return (
     <div>
-      <div className="card">
+      <div className="card hover:bg-red-300 ease-in duration-300 rounded-lg">
         <div className="block md:flex items-center rounded-lg shadow-xl">
           <div className="w-full md:w-1/2 p-6">
             <img
