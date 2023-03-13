@@ -32,8 +32,8 @@ const Header = () => {
           <div>
             <Link href="/">
               <h1
-                style={{ color: `${txtclr}` }}
-                className="font-bold text-2xl md:text-4xl"
+                // style={{ color: `${txtclr}` }}
+                className="font-bold text-2xl md:text-4xl text-red-400"
               >
                 Door Next Store
               </h1>
@@ -41,21 +41,21 @@ const Header = () => {
           </div>
           <div className="">
             <ul style={{ color: `${txtclr}` }} className="hidden sm:flex ">
-              <li className="p-4 hover:bg-slate-600 rounded-md hover:text-white">
+              <li className="p-4 hover:bg-red-500 rounded-md hover:text-white">
                 <Link href="/">Home</Link>
               </li>
-              <li className="p-4 hover:bg-slate-600 rounded-md hover:text-white">
+              <li className="p-4 hover:bg-red-500 rounded-md hover:text-white">
                 <Link href="#collection">Collections</Link>
               </li>
 
-              <li className="p-4 hover:bg-slate-600 rounded-md hover:text-white">
+              <li className="p-4 hover:bg-red-500 rounded-md hover:text-white">
                 <Link href="/contact">Cart</Link>
               </li>
-              <li className="p-4 hover:bg-slate-600 rounded-md hover:text-white">
-                <Link href="/contact">Login</Link>
-              </li>
-              <li className="p-4 hover:bg-slate-600 rounded-md hover:text-white">
+              <li className="p-4 hover:bg-red-500 rounded-md hover:text-white">
                 <Link href="/work">Contact</Link>
+              </li>
+              <li className="p-4 bg-red-400 hover:bg-red-500 rounded-md hover:text-white">
+                <Link href="/contact">Login</Link>
               </li>
             </ul>
           </div>
