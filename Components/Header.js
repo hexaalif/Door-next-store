@@ -113,7 +113,10 @@ const Header = () => {
                 <Link href="/collection">Collections</Link>
               </li>
               <li onClick={handleNav} className="p-4 text-4xl">
-                <Link href="/work">works</Link>
+                <Link href="/work">Cart</Link>
+              </li>
+              <li onClick={handleNav} className="p-4 text-4xl">
+                <Link href="/contact">Login</Link>
               </li>
               <li onClick={handleNav} className="p-4 text-4xl">
                 <Link href="/contact">Contact</Link>
