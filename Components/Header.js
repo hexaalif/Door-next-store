@@ -26,7 +26,7 @@ const Header = () => {
     <div>
       <div
         style={{ backgroundColor: `${clr}` }}
-        className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
+        className="fixed left-0 top-0 w-full z-10 ease-in duration-300 shadow-lg"
       >
         <div className="max-w-[1240px]  m-auto flex justify-between items-center p-4 text-white">
           <div>
