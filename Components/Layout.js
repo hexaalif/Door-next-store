@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Footer from "./Footer";
 import Header from "./Header";
 
 const Layout = ({ children }) => {
@@ -10,7 +11,9 @@ const Layout = ({ children }) => {
           <Header />
         </header>
         <main>{children}</main>
-        <footer>footer</footer>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </div>
   );
