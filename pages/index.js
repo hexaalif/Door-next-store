@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Layout from "@/Components/Layout";
+import Hero from "@/Components/Hero";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <Layout>Home</Layout>
+        <Layout>
+          <Hero
+            headings="Shop Easily at Door Next Store"
+            message="Daily shopping is painful. So, Order from Door Next Store"
+          />
+        </Layout>
       </div>
     </>
   );
