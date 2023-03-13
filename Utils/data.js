@@ -2,7 +2,7 @@ const data = {
   products: [
     {
       name: "Denim",
-      slug: "free-shirt",
+      slug: "Denim-Item",
       category: "Shirts",
       image: "/Images/denim.jpg",
       price: 70,
@@ -16,7 +16,7 @@ const data = {
     },
     {
       name: "Denim Short",
-      slug: "fit-shirt",
+      slug: "Denim-Short",
       category: "Shirts",
       image: "/Images/DenimShort.jfif",
       price: 80,
@@ -30,7 +30,7 @@ const data = {
     },
     {
       name: "Fisherman Rib",
-      slug: "slim-shirt",
+      slug: "rib",
       category: "Shirts",
       image: "/Images/fishermanRib.jpg",
       price: 90,
@@ -42,7 +42,7 @@ const data = {
     },
     {
       name: "Hoodies",
-      slug: "golf-pants",
+      slug: "hoodies",
       category: "Pants",
       image: "/images/hoodies.jpg",
       price: 90,
@@ -66,7 +66,7 @@ const data = {
     },
     {
       name: "Polo shirt",
-      slug: "classic-pants",
+      slug: "polo-shirts",
       category: "Pants",
       image: "/Images/polo-shirt.jpg",
       price: 75,
