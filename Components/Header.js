@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 const Header = () => {
   const [nav, setNav] = useState(false);
   const [clr, setClr] = useState("transparent");
-  const [txtclr, setTxtclr] = useState("black");
+  const [txtclr, setTxtclr] = useState("white");
 
   const handleNav = () => {
     setNav(!nav);
