@@ -46,18 +46,18 @@ const ProductScreen = () => {
       </div>
 
       {/* Product Details */}
-      <div className="mx-auto max-w-[1200px] shadow-2xl p-6 mt-16 rounded-2xl">
-        <div className="flex justify-between">
-          <div className="w-2/4">
+      <div className="mx-auto max-w-[1200px] shadow-2xl p-4 mt-16 rounded-2xl">
+        <div className="block md:flex items-center justify-between">
+          <div className="md:w-1/3">
             <Image
               src={product.image}
               alt="/"
-              className="rounded-2xl mx-auto"
-              height={600}
-              width={600}
+              className="rounded-2xl"
+              height={400}
+              width={400}
             />
           </div>
-          <div className="w-1/4 text-left pl-10">
+          <div className="md:w-1/4 text-left">
             <p className=" text-3xl font-bold text-gray-600">{product.name}</p>
             <p className="mt-2 text-2xl font-medium text-gray-600">
               Brand: {product.brand}
@@ -72,7 +72,7 @@ const ProductScreen = () => {
               Rating: {product.rating}
             </p>
           </div>
-          <div className="w-1/4">
+          <div className="md:w-1/4">
             <div className="">
               <p className="text-2xl font-bold text-red-400 mb-10">
                 Price: ${product.price}
