@@ -2,6 +2,7 @@ import Hero from "@/Components/Hero";
 import Layout from "@/Components/Layout";
 import data from "@/Utils/data";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 
@@ -23,23 +24,25 @@ const ProductScreen = () => {
 
       {/* previous btn */}
       <div className="mt-16 text-white">
-        <button className="px-8 py-2 bg-red-400 hover:bg-red-500 rounded-md flex items-center mx-auto">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
-            />
-          </svg>
-          Go Back to Collection
-        </button>
+        <Link href={`/collections`}>
+          <button className="px-8 py-2 bg-red-400 hover:bg-red-500 rounded-md flex items-center mx-auto">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
+              />
+            </svg>
+            Go Back to Collection
+          </button>
+        </Link>
       </div>
 
       {/* Product Details */}
@@ -65,11 +68,20 @@ const ProductScreen = () => {
             <p className="mt-2 text-xl font-normal text-gray-600">
               Description: {product.description}
             </p>
-            <p className="mt-2 text-xl font-normal text-gray-600">
+            <p className="mt-2 text-xl font-medium text-gray-600">
               Rating: {product.rating}
             </p>
           </div>
-          <div className="w-1/4">3</div>
+          <div className="w-1/4">
+            <div className="">
+              <p className="text-2xl font-bold text-red-400 mb-10">
+                Price: ${product.price}
+              </p>
+              <button className="bg-red-400 p-4 w-full text-white rounded-lg">
+                Add to Cart
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </Layout>

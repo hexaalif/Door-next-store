@@ -16,13 +16,9 @@ const Layout = ({ title, children }) => {
 
       {/* main layout section */}
       <div className="flex min-h-screen flex-col justify-between text-center">
-        <header className="">
-          <Header />
-        </header>
+        <header className="">{/* <Header /> */}</header>
         <main>{children}</main>
-        <footer>
-          <Footer />
-        </footer>
+        <footer>{/* <Footer /> */}</footer>
       </div>
     </div>
   );

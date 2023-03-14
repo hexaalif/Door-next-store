@@ -45,7 +45,7 @@ const Header = () => {
                 <Link href="/">Home</Link>
               </li>
               <li className="p-4 hover:bg-red-500 rounded-md hover:text-white">
-                <Link href="#collection">Collections</Link>
+                <Link href="/collections">Collections</Link>
               </li>
 
               <li className="p-4 hover:bg-red-500 rounded-md hover:text-white">
