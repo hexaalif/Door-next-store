@@ -54,12 +54,14 @@ const Header = () => {
               </li>
 
               <li className="p-4 hover:bg-red-500 rounded-md hover:text-white">
-                Cart
-                {cart.cartItems.length > 0 && (
-                  <span className="ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white">
-                    {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
-                  </span>
-                )}
+                <Link href="/cart">
+                  Cart
+                  {cart.cartItems.length > 0 && (
+                    <span className="ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white">
+                      {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                    </span>
+                  )}
+                </Link>
               </li>
               <li className="p-4 hover:bg-red-500 rounded-md hover:text-white">
                 <Link href="/work">Contact</Link>
