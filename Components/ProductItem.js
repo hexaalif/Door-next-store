@@ -1,10 +1,24 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
 import styles from "@/styles/Home.module.css";
+import { Store } from "@/Utils/Store";
 
 export default function ProductItem({ product }) {
-  console.log(product);
+  const { state, dispatch } = useContext(Store);
+
+  const handleCart = () => {
+    const existItem = state.cart.cartItems.find((x) => x.slug === product.slug);
+
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+
+    if (product.countInStock < quantity) {
+      alert("Sorry. this product is out of Stock");
+    }
+
+    dispatch({ type: "CART_ADD_ITEM", payload: { ...product, quantity } });
+  };
+
   return (
     <div>
       <div className="card hover:bg-red-300 ease-in duration-300 rounded-lg">
@@ -32,7 +46,10 @@ export default function ProductItem({ product }) {
               <p className=" text-2xl font-bold text-red-400">
                 ${product.price}
               </p>
-              <button className="bg-red-400 p-4 text-white rounded-lg">
+              <button
+                onClick={handleCart}
+                className="bg-red-400 p-4 text-white rounded-lg"
+              >
                 Add to Cart
               </button>
             </div>

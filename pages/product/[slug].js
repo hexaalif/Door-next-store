@@ -97,7 +97,7 @@ const ProductScreen = () => {
                 onClick={handleCart}
                 className="bg-red-400 p-4 w-full text-white rounded-lg"
               >
-                Add to Cart
+                <Link href="/cart">Add to Cart</Link>
               </button>
             </div>
           </div>
