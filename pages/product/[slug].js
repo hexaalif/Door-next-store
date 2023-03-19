@@ -22,6 +22,10 @@ const ProductScreen = () => {
 
     const quantity = existItem ? existItem.quantity + 1 : 1;
 
+    if (product.countInStock < quantity) {
+      alert("Sorry. this product is out of Stock");
+    }
+
     dispatch({ type: "CART_ADD_ITEM", payload: { ...product, quantity } });
   };
 
