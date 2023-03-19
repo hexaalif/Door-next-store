@@ -1,18 +1,28 @@
 import Hero from "@/Components/Hero";
 import Layout from "@/Components/Layout";
 import data from "@/Utils/data";
+import { Store } from "@/Utils/Store";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useContext } from "react";
 
 const ProductScreen = () => {
+  const { state, dispatch } = useContext(Store);
+
   const { query } = useRouter();
   const { slug } = query;
   const product = data.products.find((x) => x.slug === slug);
   if (!product) {
     return <div>product not found</div>;
   }
+
+  const handleCart = () => {
+    // const existItem = state.cart.cartItems.find((x)=> x.slug)
+
+    dispatch({ type: "CART_ADD_ITEM", payload: { ...product, quantity } });
+  };
+
   return (
     <Layout title={product.name}>
       <div className="custom-img h-80 flex items-center justify-center">
@@ -77,7 +87,10 @@ const ProductScreen = () => {
               <p className="text-2xl font-bold text-red-400 mb-10">
                 Price: ${product.price}
               </p>
-              <button className="bg-red-400 p-4 w-full text-white rounded-lg">
+              <button
+                onClick={handleCart}
+                className="bg-red-400 p-4 w-full text-white rounded-lg"
+              >
                 Add to Cart
               </button>
             </div>

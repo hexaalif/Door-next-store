@@ -1,7 +1,11 @@
+import { Store } from "@/Utils/Store";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 const Header = () => {
+  const { state } = useContext(Store);
+  const { cart } = state;
+
   const [nav, setNav] = useState(false);
   const [clr, setClr] = useState("transparent");
   const [txtclr, setTxtclr] = useState("white");
@@ -22,6 +26,7 @@ const Header = () => {
     };
     window.addEventListener("scroll", changeClr);
   }, []);
+
   return (
     <div>
       <div
@@ -49,7 +54,12 @@ const Header = () => {
               </li>
 
               <li className="p-4 hover:bg-red-500 rounded-md hover:text-white">
-                <Link href="/contact">Cart</Link>
+                Cart
+                {cart.cartItems.length > 0 && (
+                  <span className="ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white">
+                    {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                  </span>
+                )}
               </li>
               <li className="p-4 hover:bg-red-500 rounded-md hover:text-white">
                 <Link href="/work">Contact</Link>

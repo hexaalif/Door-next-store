@@ -1,12 +1,15 @@
 import Footer from "@/Components/Footer";
 import Header from "@/Components/Header";
 import "@/styles/globals.css";
+import { StoreProvider } from "@/Utils/Store";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Header />
-      <Component {...pageProps} />
+      <StoreProvider>
+        <Header />
+        <Component {...pageProps} />
+      </StoreProvider>
       <Footer />
     </>
   );
