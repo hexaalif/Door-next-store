@@ -2,10 +2,13 @@ import Layout from "@/Components/Layout";
 import { Store } from "@/Utils/Store";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useContext } from "react";
 
 const Cart = () => {
   const { state, dispatch } = useContext(Store);
+
+  const router = useRouter();
 
   const {
     cart: { cartItems },
@@ -20,7 +23,7 @@ const Cart = () => {
       <div className="max-w-[1240px] m-auto md:p-6">
         {/* hero content */}
         <div className="absolute top-0 left-0 right-0 bottom-[490px] md:bottom-[625px] bg-black z-[2]"></div>
-        <div className="text-left text-xl md:text-5xl font-bold text-black my-5">
+        <div className="mt-24 text-left text-xl md:text-5xl font-bold text-black my-5">
           <h1>Shopping Cart</h1>
           <div className="flex my-10 text-xs md:text-xl font-light">
             <div>
@@ -113,7 +116,10 @@ const Cart = () => {
                 ${cartItems.reduce((a, c) => a + c.quantity * c.price, 0)}
               </p>
               <div className="text-center">
-                <button className="px-24  py-2 bg-black hover:bg-green-400 rounded-full text-white">
+                <button
+                  onClick={() => router.push("/shipping")}
+                  className="px-24  py-2 bg-black hover:bg-green-400 rounded-full text-white"
+                >
                   Checkout
                 </button>
               </div>
