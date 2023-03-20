@@ -17,8 +17,28 @@ const Cart = () => {
 
   return (
     <Layout>
-      <div>
-        <h1 className="mb-4 text-xl">Shopping Cart</h1>
+      <div className="m-auto w-[1240px] p-6">
+        {/* hero content */}
+        <div className="absolute top-0 left-0 right-0 bottom-[625px] bg-gray-400 z-[2]"></div>
+        <div className="text-left text-5xl font-bold text-black my-5">
+          <h1>Shopping Cart</h1>
+          <div className="flex my-10 text-xl font-light">
+            <div>
+              <Link href="/">Home</Link> /{" "}
+            </div>
+            <div>
+              {" "}
+              <Link href="/collections">Collections</Link> /
+            </div>
+            <div>
+              <Link href="/cart" className="underline">
+                {" "}
+                Cart
+              </Link>
+            </div>
+          </div>
+        </div>
+        {/* table */}
         {cartItems.length === 0 ? (
           <div>
             Cart is empty. <Link href="/">Go shopping</Link>
@@ -39,7 +59,10 @@ const Cart = () => {
                   {cartItems.map((item) => (
                     <tr key={item.slug} className="border-b">
                       <td>
-                        <Link href={`/product/${item.slug}`}>
+                        <Link
+                          className="flex items-center"
+                          href={`/product/${item.slug}`}
+                        >
                           <Image
                             src={item.image}
                             alt={item.name}
@@ -52,7 +75,7 @@ const Cart = () => {
                       </td>
                       <td className="p-5 text-right">{item.quantity}</td>
                       <td className="p-5 text-right">${item.price}</td>
-                      <td>
+                      <td className="p-5 text-center">
                         <button onClick={() => removeItem(item)}>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
