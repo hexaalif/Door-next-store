@@ -46,12 +46,14 @@ export default function ProductItem({ product }) {
               <p className=" text-2xl font-bold text-red-400">
                 ${product.price}
               </p>
-              <button
-                onClick={handleCart}
-                className="bg-red-400 p-4 text-white rounded-lg"
-              >
-                Add to Cart
-              </button>
+              <Link href={`/product/${product.slug}`}>
+                <button
+                  onClick={handleCart}
+                  className="bg-red-400 p-4 text-white rounded-lg"
+                >
+                  Add to Cart
+                </button>
+              </Link>
             </div>
           </div>
         </div>
