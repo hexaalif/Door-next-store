@@ -93,12 +93,15 @@ const ProductScreen = () => {
               <p className="text-2xl font-bold text-red-400 mb-10">
                 Price: ${product.price}
               </p>
-              <button
-                onClick={handleCart}
-                className="bg-red-400 p-4 w-full text-white rounded-lg"
-              >
-                <Link href="/cart">Add to Cart</Link>
-              </button>
+
+              <Link href="/cart">
+                <button
+                  onClick={handleCart}
+                  className="bg-red-400 p-4 w-full text-white rounded-lg"
+                >
+                  Add to Cart
+                </button>
+              </Link>
             </div>
           </div>
         </div>
