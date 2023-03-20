@@ -5,20 +5,6 @@ import styles from "@/styles/Home.module.css";
 import { Store } from "@/Utils/Store";
 
 export default function ProductItem({ product }) {
-  const { state, dispatch } = useContext(Store);
-
-  const handleCart = () => {
-    const existItem = state.cart.cartItems.find((x) => x.slug === product.slug);
-
-    const quantity = existItem ? existItem.quantity + 1 : 1;
-
-    if (product.countInStock < quantity) {
-      alert("Sorry. this product is out of Stock");
-    }
-
-    dispatch({ type: "CART_ADD_ITEM", payload: { ...product, quantity } });
-  };
-
   return (
     <div>
       <div className="card hover:bg-red-300 ease-in duration-300 rounded-lg">
@@ -47,10 +33,7 @@ export default function ProductItem({ product }) {
                 ${product.price}
               </p>
               <Link href={`/product/${product.slug}`}>
-                <button
-                  onClick={handleCart}
-                  className="bg-red-400 p-4 text-white rounded-lg"
-                >
+                <button className="bg-red-400 p-4 text-white rounded-lg">
                   Add to Cart
                 </button>
               </Link>

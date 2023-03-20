@@ -73,6 +73,7 @@ const ProductScreen = () => {
               width={400}
             />
           </div>
+          <div className="w-0.5 md:h-36 bg-slate-300 border"></div>
           <div className="md:w-1/4 text-left">
             <p className=" text-3xl font-bold text-gray-600">{product.name}</p>
             <p className="mt-2 text-2xl font-medium text-gray-600">
@@ -88,6 +89,8 @@ const ProductScreen = () => {
               Rating: {product.rating}
             </p>
           </div>
+          <div className="w-0.5 md:h-36 bg-slate-300 border"></div>
+
           <div className="md:w-1/4">
             <div className="">
               <p className="text-2xl font-bold text-red-400 mb-10">
