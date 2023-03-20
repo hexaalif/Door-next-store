@@ -40,8 +40,8 @@ const ProductScreen = () => {
 
       {/* previous btn */}
       <div className="mt-16 text-white">
-        <Link href={`/collections`}>
-          <button className="px-8 py-2 bg-red-400 hover:bg-red-500 rounded-md flex items-center mx-auto">
+        <button className="px-8 py-2 bg-red-400 hover:bg-red-500 rounded-md mx-auto">
+          <Link className="flex items-center" href={`/collections`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -57,8 +57,8 @@ const ProductScreen = () => {
               />
             </svg>
             Go Back to Collection
-          </button>
-        </Link>
+          </Link>
+        </button>
       </div>
 
       {/* Product Details */}
