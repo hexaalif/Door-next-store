@@ -11,8 +11,8 @@ const Contact = () => {
       <div className="block md:flex items-center bg-pink-200 p-4 lg:p-12 rounded-lg">
         <div className="w-full lg:w-3/4 p-0 lg:p-24 mb-10 md:mb-1">
           <p className="mb-8 lg:mb-16 font-light text-center text-gray-600 dark:text-gray-800 text-xs lg:text-xl">
-            Got a technical issue? Want to send feedback about a beta feature?
-            Need details about our Business plan? Let us know.
+            Hi there! Do you have any suggestions for us? Feel free to share
+            ideas to improve ourself. We are contsantly moving our ideas!!
           </p>
           <div className="flex items-center mb-3 text-xs md:text-xl">
             <svg
@@ -30,7 +30,7 @@ const Contact = () => {
               />
             </svg>
 
-            <p>+8801918196356</p>
+            <p>+8801629837675</p>
           </div>
           <div className="flex items-center mb-3 text-xs md:text-xl">
             <svg
