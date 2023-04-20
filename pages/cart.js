@@ -41,6 +41,10 @@ const Cart = () => {
             </div>
           </div>
         </div>
+
+        {/* border part */}
+        <div className="md:w-full h-0.5 bg-slate-200 border mb-12"></div>
+
         {/* table */}
         {cartItems.length === 0 ? (
           <div>
@@ -50,8 +54,8 @@ const Cart = () => {
             </Link>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-4 md:gap-5">
-            <div className="block md:overflow-x-auto col-span-1 md:col-span-3">
+          <div className="grid md:grid-cols-4 md:gap-5">
+            <div className="block md:overflow-x-auto md:col-span-3">
               <table className=" md:min-w-full ">
                 <thead className="border-b">
                   <tr>
@@ -72,8 +76,8 @@ const Cart = () => {
                           <Image
                             src={item.image}
                             alt={item.name}
-                            width={50}
-                            height={50}
+                            width={150}
+                            height={150}
                           ></Image>
                           &nbsp;
                           {item.name}
@@ -104,6 +108,8 @@ const Cart = () => {
                 </tbody>
               </table>
             </div>
+
+            {/* order function part */}
             <div className="p-5 text-left">
               <p className="text-center text-2xl font-bold">Order Summary</p>
               <p className="text-sm text-gray-600 my-10 font-medium border-b">
