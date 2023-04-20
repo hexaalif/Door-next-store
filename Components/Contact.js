@@ -8,7 +8,7 @@ const Contact = () => {
         <div className=" border-red-400 border-2 w-24 mt-5 mx-auto"></div>
       </h1>
 
-      <div className="block md:flex items-center bg-pink-200 p-4 lg:p-12 rounded-lg">
+      <div className="block md:flex items-center bg-red-300 p-4 lg:p-12 rounded-lg">
         <div className="w-full lg:w-3/4 p-0 lg:p-24 mb-10 md:mb-1">
           <p className="mb-8 lg:mb-16 font-light text-center text-gray-600 dark:text-gray-800 text-xs lg:text-xl">
             Hi there! Do you have any suggestions for us? Feel free to share
@@ -48,7 +48,7 @@ const Contact = () => {
               />
             </svg>
 
-            <p>emtiyazapparelslimited@gmail.com</p>
+            <p>rtrshadullah@gmail.com</p>
           </div>
           <div className="flex items-center text-xs md:text-xl">
             <svg
